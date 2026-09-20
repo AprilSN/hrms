@@ -47,11 +47,7 @@ hrms/
      mysql -u root -p hrms_employee_database < database/hrms_database1.sql
      ```
 
-2. **⚠️ Connection credentials — read before pushing this repo public**
-   - `src/DatabaseConnection.cs` has a **hardcoded MySQL username and password** in plain text. If this password is still in use anywhere, change it before making this repository public, and replace the hardcoded value with an environment variable or a local config file that's excluded via `.gitignore`.
-   - Update the connection string in `DatabaseConnection.cs` to match your own local MySQL credentials before running.
-
-3. **Open in Visual Studio**
+2. **Open in Visual Studio**
    - Open `HrmsProject.sln` in Visual Studio (Windows).
    - Restore NuGet packages (`MySql.Data` and its dependencies) if prompted.
    - Set the startup project and run — `Program.cs` is the entry point, opening `LoginForm`.
